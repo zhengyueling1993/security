@@ -7,7 +7,7 @@ def connScan(tgtHost,tgtPort):
 	try:
 		connSkt = socket(AF_INET,SOCK_STREAM)
 		connSkt.connect((tgtHost,tgtPort))
-		connSkt.send('ViolentPython\r\n')
+		connSkt.send('Hello\r\n')
 		results = connSkt.recv(100)
 		print '[+]%d/tcp open'%tgtPort
 		print '[+] ' + str(results)
